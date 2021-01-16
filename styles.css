@@ -1,0 +1,6 @@
+div{
+    width: 300px; 
+    height: 200px; 
+    background-color: aquamarine;
+    border-radius: 50%; /*Makes a circle appear due to property feature(s)*/
+}
