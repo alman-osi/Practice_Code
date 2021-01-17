@@ -38,3 +38,30 @@ if (a === 8) { //Deeply Equals means 'a' is common in both Value and Type
 else {
     console.log("THERE'S NO SHOT!")
 }
+
+//Modulus Operator: gives the remainder of parameters
+console.log("Modulus")
+console.log(20 % 4)
+console.log(5 % 4)
+//Increment Operator
+console.log("Increment")
+let count = 3
+count++
+console.log(count)
+//Decrement Operator
+console.log("Decrement")
+let counts = 8
+counts--
+console.log(counts)
+//Unary Negation Operator
+console.log("Unary Negation")
+let x = 6
+console.log(-x) //makes a variable or such, negative
+//Unary Plus Operator
+console.log("Unary Plus")
+let c = "3"
+console.log(+c) //turns String(s) of numbers into number Types
+//Exponential Operator
+console.log("Exponential")
+let r = 6
+console.log(r ** 2)
