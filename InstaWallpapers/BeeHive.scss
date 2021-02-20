@@ -1,0 +1,39 @@
+/*linearGradient
+repeatinglinearGradiant
+repeatingraidialGradiant*/
+
+body{
+        
+    height:100vh;
+    background:
+    linear-gradient( /*located at bottom left due to 45deg*/
+            45deg,
+            orange, 
+            transparent
+        ), 
+    repeating-linear-gradient( /*Top gradient: left to right diangonal*/
+            45deg, 
+            black 0%, 
+            black 5%, 
+            transparent 5%, 
+            transparent 10%, 
+            black 10%, 
+            black 11%, 
+            transparent 11%, 
+            transparent 13%
+        ), 
+    orange repeating-linear-gradient( /*Goes behind the top gradient*/ 
+            -45deg, 
+            rgba(0, 0, 0, 1) 0%, 
+            rgba(0, 0, 0, 1) 5%, 
+            transparent 5%, 
+            transparent 10%
+        ); 
+
+//HIVE_05
+//    linear-gradient( 45deg, orange, transparent), /*located at bottom left due to 45deg*/
+//  repeating-linear-gradient(45deg, black 0%, black 5%, transparent 5%, transparent 10%),
+        /*Top gradient: left to right diangonal*/
+//    orange repeating-linear-gradient(-45deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 5%, transparent 5%, transparent 10%);
+        /*Goes behind the top gradient*/
+}

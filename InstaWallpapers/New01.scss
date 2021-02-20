@@ -1,0 +1,21 @@
+//fallbacks in SCSS coding
+
+$vars: ( //this is a MAP that holds custom-
+    primary-clr: #495,
+    secondary-clr: #322,
+);
+
+:root {
+    @each $property, $value in $vars{ //for each (property and value) in (vars)...
+        --#{$property}: #{$value};
+    }
+}
+
+//Normal Root use is for having all changable code in one place
+/*:root{
+    --primary-clr:#495
+    --secondary-clr:#495
+}
+body{
+    background-color: var(--primary-clr);
+}*/
