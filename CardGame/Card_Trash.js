@@ -33,7 +33,12 @@ class Deck{
     playerBase() { //input the amount of players here
         let player = prompt("Please enter amount of players");
         if (player != null) {
-          console.log("Success! " + player + " players are now in the game");
+            if (2 <= player && player <= 6) {
+                console.log("Success! " + player + " players are now in the game");
+            }
+            else {
+                console.log("Choose an amount between 2 and 6 players!");
+            }
         }
         /**let element = "";
          * for (let  x = 1; x <=10; x++){
