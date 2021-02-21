@@ -38,6 +38,7 @@ class Deck {
             return hand;
     }
 }
+
 class thePlayers extends Deck{
     constructor(player_Amnt){
         super();
@@ -51,13 +52,13 @@ class thePlayers extends Deck{
                 switch (player_Amnt) {
                     case '2':
                         deck.createDeck(suit, value);
-                        console.log("One deck made available");
+                        console.log("One deck is available");
                         break;
                     case '3':
                     case '4':
                         deck.createDeck(suit, value);
                         deck.createDeck(suit, value);
-                        console.log("Two decks made available");
+                        console.log("Two decks are now available");
                     
                         break;
                     case '5':
@@ -65,15 +66,17 @@ class thePlayers extends Deck{
                         deck.createDeck(suit, value);
                         deck.createDeck(suit, value);
                         deck.createDeck(suit, value);
-                        console.log("Three decks made available");
+                        console.log("Three decks are now available");
                         break;
                     default:
                         console.log("Player number entered for this game is invalid. Select 2-6 Players.");
                         break;
                 }
-                for (let players = 0; players < player_Amnt; players++){
+                deck.Shuffle();
+                
+                for (let players = 1; players <= player_Amnt; players++){
                     console.log(deck.Deal()); 
-                    console.log("Here are your 10 cards, players.");
+                    console.log("Here are your 10 cards, player " + players);
                 }
             }
             else {
@@ -92,8 +95,5 @@ let suit = ["Spade", "Diamond", "Clover", "Hearts"];
 //'deck' in CONSOLE is always LOWER CASE via 'let' command below
 let deck = new Deck(); //New deck is created 
 let playerbase = new thePlayers();
-
-deck.Shuffle();
-deck.Shuffle();
 
 //for-loop for player's scores or end results
