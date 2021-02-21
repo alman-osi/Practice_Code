@@ -73,7 +73,7 @@ class thePlayers extends Deck{
                         break;
                 }
                 deck.Shuffle();
-                
+
                 for (let players = 1; players <= player_Amnt; players++){
                     console.log(deck.Deal()); 
                     console.log("Here are your 10 cards, player " + players);
@@ -95,5 +95,7 @@ let suit = ["Spade", "Diamond", "Clover", "Hearts"];
 //'deck' in CONSOLE is always LOWER CASE via 'let' command below
 let deck = new Deck(); //New deck is created 
 let playerbase = new thePlayers();
+
+//Create class called 'theGame' to code the game's instructions based on the players
 
 //for-loop for player's scores or end results
