@@ -49,19 +49,19 @@ class thePlayers extends Deck{
             if (2 <= player_Amnt && player_Amnt <= 6) {
                 console.log("Success! " + player_Amnt + " players are now in the game");
                 switch (player_Amnt) {
-                    case 2:
+                    case '2':
                         deck.createDeck(suit, value);
                         console.log("One deck made available");
                         break;
-                    case 3:
-                    case 4:
+                    case '3':
+                    case '4':
                         deck.createDeck(suit, value);
                         deck.createDeck(suit, value);
                         console.log("Two decks made available");
                     
                         break;
-                    case 5:
-                    case 6:
+                    case '5':
+                    case '6':
                         deck.createDeck(suit, value);
                         deck.createDeck(suit, value);
                         deck.createDeck(suit, value);
