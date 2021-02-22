@@ -74,7 +74,7 @@ class thePlayers extends Deck{
                 }
                 deck.Shuffle();
 
-                for (let players = 1; players <= player_Amnt; players++){
+                for (let players = 1; players <= player_Amnt; players++){ //informs players of their cards
                     console.log(deck.Deal()); 
                     console.log("Here are your 10 cards, player " + players);
                 }

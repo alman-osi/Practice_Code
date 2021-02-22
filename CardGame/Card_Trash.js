@@ -74,7 +74,7 @@ class thePlayers extends Deck{
                 }
                 deck.Shuffle();
 
-                for (let players = 1; players <= player_Amnt; players++){
+                for (let players = 1; players <= player_Amnt; players++){ //Informs players of thier cards
                     console.log(deck.Deal()); 
                     console.log("Here are your 10 cards, player " + players);
                 }
@@ -83,10 +83,6 @@ class thePlayers extends Deck{
                 console.log("Choose an amount between 2 and 6 players!");
             }
         }
-        /**let element = "";
-         * for (let  x = 1; x <=10; x++){
-         * element = "demo" + x;
-         * document.getElementById(element).innerHTML = Deal();} */
     }
 }
 let value = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
