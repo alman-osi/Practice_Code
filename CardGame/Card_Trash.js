@@ -1,3 +1,6 @@
+let value = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+let suit = ["Spade", "Diamond", "Clover", "Hearts"];
+
 class Card {
     constructor(suit, value){ //initallize/creates a card
         this.suit = suit;
@@ -38,10 +41,8 @@ class Deck {
             return hand;
     }
 }
-
-class thePlayers extends Deck{
+class thePlayers{
     constructor(player_Amnt){
-        super();
         this.player_Amnt = player_Amnt;
     }
     playerBase() { //input the amount of players here
@@ -69,12 +70,13 @@ class thePlayers extends Deck{
                         console.log("Three decks are now available");
                         break;
                     default:
-                        console.log("Player number entered for this game is invalid. Select 2-6 Players.");
+                        console.log("Number of entered for this game is invalid. Select 2-6 Players.");
                         break;
                 }
                 deck.Shuffle();
 
-                for (let players = 1; players <= player_Amnt; players++){ //Informs players of thier cards
+                //informs players of their cards
+                for (let players = 1; players <= player_Amnt; players++){ 
                     console.log(deck.Deal()); 
                     console.log("Here are your 10 cards, player " + players);
                 }
@@ -85,12 +87,22 @@ class thePlayers extends Deck{
         }
     }
 }
-let value = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
-let suit = ["Spade", "Diamond", "Clover", "Hearts"];
+class theGame extends thePlayers{
+    constructor(players){
+        super();
+        this.players = players;
+    }
+    playerTurn(){
+        console.log(players + " are playing this game");
+    }
+    //code here
 
+}
 //'deck' in CONSOLE is always LOWER CASE via 'let' command below
 let deck = new Deck(); //New deck is created 
 let playerbase = new thePlayers();
+let game = new theGame();
+console.log(game.playerTurn());
 
 //Create class called 'theGame' to code the game's instructions based on the players
 
