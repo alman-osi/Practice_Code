@@ -90,10 +90,10 @@ class thePlayers{
 class theGame extends thePlayers{
     constructor(players){
         super();
-        this.players = players;
+        this.players = players; //Currently undefined
     }
     playerTurn(){
-        console.log(players + " are playing this game");
+        console.log(this.players + " are playing this game");
     }
     //code here
 
